@@ -2,7 +2,7 @@
 /**
 *main - Entry point
 *
-*Description: using sizeof to print the size of various types.
+*Description: A C program that prints with printf function.
 *
 *return: Always 0 (Success)
 */
