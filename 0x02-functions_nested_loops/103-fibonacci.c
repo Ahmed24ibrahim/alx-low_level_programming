@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int main(void)
-{
-    long previous = 1, current = 2, sum = current;
+int main(void) {
+    long long a = 1, b = 2, sum = 0;
 
-    while (current + previous < 4000000)
-    {
-        long next = previous + current;
+    while (a <= 4000000) {
+        if (a % 2 == 0) {
+            sum += a;
+        }
 
-        if (next % 2 == 0)
-            sum += next;
-
-        previous = current;
-        current = next;
+        long long next = a + b;
+        a = b;
+        b = next;
     }
 
-    printf("The sum of even Fibonacci numbers less than 4,000,000 is: %ld\n", sum);
+    printf("The sum of even Fibonacci numbers not exceeding 4,000,000 is: %lld\n", sum);
+
     return 0;
 }
